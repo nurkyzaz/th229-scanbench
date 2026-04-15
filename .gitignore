@@ -1,0 +1,30 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# LaTeX build byproducts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Local packaging outputs
+dist/
+*.zip
+!data/raw/Freq reproducibility data.zip
+!paper/Formatting_Instructions_For_NeurIPS_2026.zip
+
+# Local exploratory scratch files
+tmp/
+scratch/

@@ -1,0 +1,87 @@
+{
+  "amplitudes_hz": [
+    100.0,
+    200.0,
+    350.0,
+    500.0,
+    750.0,
+    1000.0,
+    1500.0,
+    2200.0,
+    3200.0,
+    4500.0,
+    6500.0
+  ],
+  "default_null_model": "crystal_gaussian_x2_mixture",
+  "frequencies_hz": [
+    1.6534391534391535e-06,
+    1.1574074074074074e-06,
+    8.267195767195768e-07,
+    5.511463844797178e-07,
+    3.8580246913580245e-07,
+    2.57201646090535e-07,
+    1.9290123456790122e-07,
+    1.286008230452675e-07,
+    9.645061728395061e-08,
+    6.430041152263375e-08,
+    4.8225308641975306e-08,
+    3.1709791983764586e-08
+  ],
+  "global_seed": 229026,
+  "n_phases_per_cell": 24,
+  "official_clean_secondary_condition": "C10+C13 peak-b only; same task and split rule, used to quarantine X2 calibration concerns",
+  "periods_days": [
+    7.0,
+    10.0,
+    14.0,
+    21.0,
+    30.0,
+    45.0,
+    60.0,
+    90.0,
+    120.0,
+    180.0,
+    240.0,
+    365.0
+  ],
+  "phase_split_rule": {
+    "test_phase_indices": "19-23",
+    "train_phase_indices": "0-13",
+    "validation_phase_indices": "14-18"
+  },
+  "primary_dataset": "primary_peak_b",
+  "primary_rows": 55,
+  "secondary_generalization_task": "off-grid held-out periods; thresholds from source-grid validation nulls",
+  "split_counts": [
+    {
+      "count": 660,
+      "label": 0,
+      "split": "test"
+    },
+    {
+      "count": 660,
+      "label": 1,
+      "split": "test"
+    },
+    {
+      "count": 1848,
+      "label": 0,
+      "split": "train"
+    },
+    {
+      "count": 1848,
+      "label": 1,
+      "split": "train"
+    },
+    {
+      "count": 660,
+      "label": 0,
+      "split": "validation"
+    },
+    {
+      "count": 660,
+      "label": 1,
+      "split": "validation"
+    }
+  ]
+}

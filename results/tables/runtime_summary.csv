@@ -1,0 +1,4 @@
+baseline,runtime_sec,dataset_scope
+weighted_harmonic_regression,9.712553957999997,primary_peak_b
+generalized_lomb_scargle,9.663772292,primary_peak_b
+hierarchical_sinusoid_jitter,9.674788042000003,primary_peak_b

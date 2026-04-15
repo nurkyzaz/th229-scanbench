@@ -1,0 +1,74 @@
+folder_name,scan_time_utc,target,peak,data_rows,data_detection_columns,data_index_names,has_corrected_data,corrected_rows,corrected_detection_columns,fits_rows,fit_corrections,has_intensity,usable_future_branch
+2024_05_30_X2_peakb_CT,2024-05-30T04:13:20+00:00,X2,b,17,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat,False,0,0,4,"mem,raw",False,True
+2024_05_30_X2_peakc_j1_CT,2024-05-30T07:58:29+00:00,X2,c,17,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat,False,0,0,4,"mem,raw",False,True
+2024_05_30_X2_peakc_CT,2024-05-31T01:28:57+00:00,X2,c,18,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat,False,0,0,4,"mem,raw",False,True
+2024_05_31_X2_peakb_CT,2024-05-31T06:06:02+00:00,X2,b,15,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat,False,0,0,4,"mem,raw",False,True
+2024_06_24_X2_peakb_RT,2024-06-24T21:05:24+00:00,X2,b,21,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat,False,0,0,6,"mem,mem int,raw",False,True
+2024_06_25_X2_peakb_CT,2024-06-25T20:25:39+00:00,X2,b,16,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat,False,0,0,6,"mem,mem int,raw",False,True
+2024_07_01_X2_peakc_RT,2024-07-01T17:51:35+00:00,X2,c,15,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat,False,0,0,6,"mem,mem int,raw",False,True
+2024_07_05_X2_peakb_DT,2024-07-05T19:58:34+00:00,X2,b,15,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat,False,0,0,6,"mem,mem int,raw",False,True
+2024_07_05_X2_peakc_DT,2024-07-06T00:05:31+00:00,X2,c,15,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat,False,0,0,6,"mem,mem int,raw",False,True
+2024_09_06_X2_peakc_RT,2024-09-06T21:43:44+00:00,X2,c,14,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat,False,0,0,6,"mem,mem int,raw",False,True
+2024_09_25_X2_peakc_RT,2024-09-25T22:39:47+00:00,X2,c,11,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,4,"mem,raw",False,True
+2024_10_16_X2_peakc_RT,2024-10-17T00:20:42+00:00,X2,c,6,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2024_10_22_X2_peakb_RT,2024-10-22T17:54:14+00:00,X2,b,9,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2024_10_22_X2_peakc_RT,2024-10-22T22:16:43+00:00,X2,c,5,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2024_11_01_X2_peakb_RT,2024-11-01T20:30:51+00:00,X2,b,8,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2024_11_01_X2_peakc_RT,2024-11-01T22:26:27+00:00,X2,c,10,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2024_11_05_X2_peakc_RT,2024-11-05T23:23:14+00:00,X2,c,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2024_11_11_X2_peakb_RT,2024-11-12T00:21:56+00:00,X2,b,11,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,11,200,6,"mem,mem int,raw",False,True
+2024_11_19_X2_peakb_135K,2024-11-19T22:30:02+00:00,X2,b,11,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2024_11_20_X2_peakb_RT,2024-11-20T22:20:34+00:00,X2,b,11,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2024_11_21_X2_peakb_134K,2024-11-21T22:53:32+00:00,X2,b,11,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2024_11_25_C13_peakb_RT,2024-11-26T00:18:01+00:00,C13,b,11,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,11,200,6,"mem,mem int,raw",False,True
+2024_11_26_C13_peakb_144K,2024-11-26T22:07:04+00:00,C13,b,12,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,12,200,6,"mem,mem int,raw",False,True
+2024_11_26_C13_peakb_144K_reverse,2024-11-27T00:39:18+00:00,C13,b,11,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2024_12_02_C13_peakc_RT,2024-12-02T22:52:41+00:00,C13,c,11,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,11,200,6,"mem,mem int,raw",False,True
+2024_12_03_C13_peakc_143K,2024-12-03T22:19:31+00:00,C13,c,11,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2024_12_06_C13_peakc_RT,2024-12-06T23:05:04+00:00,C13,c,11,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2025_02_12_C10_peakc_RT,2025-02-12T18:47:44+00:00,C10,c,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2025_02_12_C10_peakb_RT,2025-02-12T23:10:40+00:00,C10,b,15,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2025_02_14_C10_peakb_145K,2025-02-14T19:21:14+00:00,C10,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_02_19_C10_peakb_195K,2025-02-19T20:04:36+00:00,C10,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2025_02_24_C10_peakb_175K,2025-02-25T06:32:15+00:00,C10,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_02_26_C10_peakb_215K,2025-02-26T23:05:58+00:00,C10,b,24,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,15,200,6,"mem,mem int,raw",False,True
+2025_02_28_C10_peakb_250K,2025-02-28T22:29:31+00:00,C10,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2025_03_03_C10_peakb_270K,2025-03-03T21:55:12+00:00,C10,b,17,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2025_03_04_C10_peakb_200K,2025-03-04T23:29:17+00:00,C10,b,14,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2025_03_11_C10_peakc_190K,2025-03-12T02:14:16+00:00,C10,c,14,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,14,200,6,"mem,mem int,raw",False,True
+2025_03_12_C10_peakc_200K,2025-03-12T21:45:56+00:00,C10,c,14,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2025_03_17_C10_peakb_195K,2025-03-17T23:03:52+00:00,C10,b,9,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,False,0,0,6,"mem,mem int,raw",False,True
+2025_03_21_C10_peakb_195K,2025-03-21T20:37:01+00:00,C10,b,15,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,15,200,6,"mem,mem int,raw",False,True
+2025_03_25_C10_peakb_153K,2025-03-25T23:44:55+00:00,C10,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_04_03_C10_peakb_195K,2025-04-03T18:21:47+00:00,C10,b,17,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,17,200,6,"mem,mem int,raw",False,True
+2025_04_14_C10_peakb_RT,2025-04-14T19:23:32+00:00,C10,b,14,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,14,200,6,"mem,mem int,raw",False,True
+2025_04_18_C10_peakb_195K,2025-04-18T21:58:47+00:00,C10,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_04_21_C10_peakb_RT,2025-04-21T22:13:42+00:00,C10,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_05_20_C13_peakb_RT,2025-05-21T00:56:44+00:00,C13,b,14,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,14,200,6,"mem,mem int,raw",False,True
+2025_05_21_C13_peakb_195K,2025-05-21T22:35:20+00:00,C13,b,14,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,14,200,6,"mem,mem int,raw",False,True
+2025_05_23_X2_peakb_RT,2025-05-23T20:45:20+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_05_27_X2_peakb_195K,2025-05-27T20:54:22+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_05_28_X2_peakb_195K,2025-05-28T20:51:43+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_05_28_X2_peakc_195K,2025-05-28T23:11:16+00:00,X2,c,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_03_X2_peakb_215K,2025-06-03T20:47:46+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_03_X2_peakb_245K,2025-06-04T00:45:04+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_04_X2_peakb_170K,2025-06-04T19:59:15+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_04_X2_peakb_145K,2025-06-04T23:29:25+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_05_X2_peakb_275K,2025-06-05T21:23:48+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_05_X2_peakb_195K,2025-06-06T01:05:40+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_06_X2_peakb_195K,2025-06-06T20:06:35+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_06_X2_peakb_195K_2,2025-06-06T23:10:02+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_09_X2_peakb_195K,2025-06-09T22:08:01+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_10_X2_peakb_210K,2025-06-10T19:34:58+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_10_X2_peakb_180K,2025-06-10T22:57:58+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_11_C13_peakb_195K,2025-06-11T22:56:45+00:00,C13,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_12_C13_peakb_195K,2025-06-12T20:13:43+00:00,C13,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_12_C13_peakb_260K,2025-06-13T00:23:58+00:00,C13,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_06_27_X2_peakb_195K,2025-06-27T22:38:00+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_07_10_X2_peakb_195K,2025-07-10T19:32:48+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_07_14_X2_peakb_195K,2025-07-14T22:31:36+00:00,X2,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_07_17_C13_peakb_195K,2025-07-17T22:58:38+00:00,C13,b,7,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,7,200,6,"mem,mem int,raw",False,True
+2025_08_01_C13_peakb_150K,2025-08-01T21:57:38+00:00,C13,b,13,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,13,200,6,"mem,mem int,raw",False,True
+2025_09_25_C13_peakc_195K,2025-09-25T22:06:47+00:00,C13,c,16,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,16,200,6,"mem,mem int,raw",True,True
+2025_09_26_C13_peakb_195K,2025-09-26T22:49:25+00:00,C13,b,14,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,12,200,6,"mem,mem int,raw",False,True
+2025_09_29_C13_peakb_195K,2025-09-29T21:41:00+00:00,C13,b,14,200,Frep|Frep uncorrected|Cav trans avg|Timestamp|Starting fbeat|Starting f_Npro_Menlo|Ending f_Npro_Imra,True,14,200,6,"mem,mem int,raw",True,True

@@ -1,0 +1,273 @@
+{
+  "authoritative_sources": {
+    "corrected_lineshape_data": [
+      "data/raw/Freq reproducibility data",
+      "Folder-level *_data_corr.pkl files when present; *_data.pkl otherwise."
+    ],
+    "drift_correction": [
+      "data/raw/JILA_Jan2026_paper.pdf",
+      "Published records are treated as already silicon-cavity-drift corrected per JILA Methods."
+    ],
+    "scan_level_frequency_records": [
+      "data/raw/2025-11-13_Th_record_db.csv",
+      "data/raw/Freq reproducibility data"
+    ],
+    "temperature_modeling": [
+      "data/raw/JILA_Jan2026_paper.pdf",
+      "Canonical scan-level records fitted from C10+C13 because the paper's Extended Data Table 1 is not machine-readable from the PDF text extraction."
+    ],
+    "theoretical_injection_families": [
+      "data/raw/Fuchs_2025.pdf",
+      "Fuchs 2025 motivates periodic modulation, slow-drift intuition, line broadening, and sideband regimes."
+    ]
+  },
+  "csv_schema": {
+    "has_stale_index_column": true,
+    "normalized_column_count": 32,
+    "normalized_columns": [
+      "source_row_index",
+      "scan_time_raw",
+      "correction",
+      "laser",
+      "fitting_function",
+      "sweep_range_khz",
+      "linear_baseline_subtraction",
+      "peak",
+      "target",
+      "fwhm_khz",
+      "fwhm_unc_khz",
+      "amp",
+      "amp_unc",
+      "baseline",
+      "baseline_unc",
+      "chisq_red",
+      "freq_hz",
+      "freq_unc_hz",
+      "temp_k",
+      "scan_time_utc",
+      "time_unix_s",
+      "mjd",
+      "scan_id",
+      "days_since_first_observation",
+      "seconds_since_first_observation",
+      "folder_name",
+      "has_data",
+      "has_data_corr",
+      "has_fits",
+      "has_intensity",
+      "n_files",
+      "files"
+    ],
+    "raw_original_column_count": 19,
+    "raw_original_columns": [
+      "Unnamed: 0",
+      "_time",
+      "correction",
+      "laser",
+      "Fitting function",
+      "Sweep range (kHz)",
+      "Linear baseline subtraction",
+      "peak",
+      "target",
+      "FWHM (kHz)",
+      "FWHM unc (kHz)",
+      "amp",
+      "amp_unc",
+      "baseline",
+      "baseline_unc",
+      "chisq_red",
+      "Freq (Hz)",
+      "Freq unc (Hz)",
+      "Temp (K)"
+    ],
+    "row_count": 428,
+    "stale_index_column_name": "Unnamed: 0",
+    "stale_index_export_policy": "dropped from processed CSV exports"
+  },
+  "missing_mem_int_scans": [
+    {
+      "folder_name": "2024_05_30_X2_peakb_CT",
+      "peak": "b",
+      "scan_time_utc": "2024-05-30T04:13:20+00:00",
+      "target": "X2"
+    },
+    {
+      "folder_name": "2024_05_30_X2_peakc_j1_CT",
+      "peak": "c",
+      "scan_time_utc": "2024-05-30T07:58:29+00:00",
+      "target": "X2"
+    },
+    {
+      "folder_name": "2024_05_30_X2_peakc_CT",
+      "peak": "c",
+      "scan_time_utc": "2024-05-31T01:28:57+00:00",
+      "target": "X2"
+    },
+    {
+      "folder_name": "2024_05_31_X2_peakb_CT",
+      "peak": "b",
+      "scan_time_utc": "2024-05-31T06:06:02+00:00",
+      "target": "X2"
+    },
+    {
+      "folder_name": "2024_09_25_X2_peakc_RT",
+      "peak": "c",
+      "scan_time_utc": "2024-09-25T22:39:47+00:00",
+      "target": "X2"
+    }
+  ],
+  "paper_backed_facts": {
+    "fuchs_mentions_broadening_or_splitting": true,
+    "fuchs_mentions_periodic_modulations": true,
+    "fuchs_mentions_slow_drift_limit": true,
+    "jila_known_cavity_drift_corrected": true,
+    "jila_line_b_lowest_temperature_sensitivity": true,
+    "jila_line_c_more_temperature_sensitive": true,
+    "jila_reports_73_line_scans": true,
+    "jila_x2_larger_spread_than_c10_c13": true,
+    "readme_mem_int_rule_present": true
+  },
+  "published_subset_checks": {
+    "default_canonical_count": 73,
+    "default_peak_b_count": 55,
+    "default_peaks_bc_count": 73,
+    "literal_readme_count": 72,
+    "literal_readme_peak_b_count": 55,
+    "strict_qc_count": 41,
+    "strict_qc_peak_b_count": 33,
+    "strict_qc_threshold": 10.0,
+    "unique_lorentzian_scan_keys": 73
+  },
+  "source_files": [
+    {
+      "exists": true,
+      "path": "data/raw/JILA_Jan2026_paper.pdf",
+      "sha256": "fb2a270d0e52755221d30433ce8d2fa04e375262408d692f3658a341a8648907",
+      "size_bytes": 3162549,
+      "size_human": "3.0 MB"
+    },
+    {
+      "exists": true,
+      "path": "data/raw/Fuchs_2025.pdf",
+      "sha256": "343b952acb669358093bec2530ae256882bfec29bcf294cfead7e179e8a1c865",
+      "size_bytes": 1350454,
+      "size_human": "1.3 MB"
+    },
+    {
+      "exists": true,
+      "path": "data/raw/2025-11-13_Th_record_db.csv",
+      "sha256": "79622a26e9ce3310f24e2b6552ccd0c39ecfb3cbcb9798ce79c3b094e465c87a",
+      "size_bytes": 103973,
+      "size_human": "101.5 KB"
+    },
+    {
+      "exists": true,
+      "path": "data/raw/read_me.docx",
+      "sha256": "07042fb2d5b484074a8cbeeab255b356c66ab0722428126beb8a538939635f4a",
+      "size_bytes": 106661,
+      "size_human": "104.2 KB"
+    },
+    {
+      "exists": true,
+      "path": "data/raw/Freq reproducibility data.zip",
+      "sha256": "f43f7e6fd65e04061348cfcef534251b6530677fee278d9131370e9301d51562",
+      "size_bytes": 1585917,
+      "size_human": "1.5 MB"
+    }
+  ],
+  "temperature_models": {
+    "b": {
+      "coefficients_hz": [
+        8.81349454891533,
+        -3453.5187061717393,
+        2020407299039694.2
+      ],
+      "covariance": [
+        [
+          0.00790765127719877,
+          -3.379809289318103,
+          343.51039974000855
+        ],
+        [
+          -3.3798092893180978,
+          1462.6260479555815,
+          -150426.46654713087
+        ],
+        [
+          343.51039974000736,
+          -150426.4665471306,
+          15679106.34589616
+        ]
+      ],
+      "fit_targets": [
+        "C10",
+        "C13"
+      ],
+      "n_points": 27,
+      "peak": "b",
+      "source": "data_derived_from_canonical_C10_C13",
+      "temperature_range_k": [
+        143.04,
+        293.9
+      ],
+      "turning_point_temperature_k": 195.9222126368003,
+      "turning_point_within_range": true,
+      "weighted_rms_hz": 1394.488554013593,
+      "y_offset_hz": 2020407298719426.5
+    },
+    "c": {
+      "coefficients_hz": [
+        -13.818960809366315,
+        -10318.502824397965,
+        2020407448769177.2
+      ],
+      "covariance": [
+        [
+          0.08414467415765452,
+          -38.56773680886253,
+          4134.800673701824
+        ],
+        [
+          -38.56773680886252,
+          17789.271264698506,
+          -1920193.8806099852
+        ],
+        [
+          4134.800673701824,
+          -1920193.880609985,
+          209151894.48218343
+        ]
+      ],
+      "fit_targets": [
+        "C10",
+        "C13"
+      ],
+      "n_points": 7,
+      "peak": "c",
+      "source": "data_derived_from_canonical_C10_C13",
+      "temperature_range_k": [
+        142.44,
+        293.8
+      ],
+      "turning_point_temperature_k": -373.3458313813371,
+      "turning_point_within_range": false,
+      "weighted_rms_hz": 3606.810779411707,
+      "y_offset_hz": 2020407445721431.2
+    }
+  },
+  "timestamps": {
+    "max_scan_time_utc": "2025-09-29T21:41:00+00:00",
+    "min_scan_time_utc": "2024-05-30T04:13:20+00:00",
+    "time_span_days": 487.7275462962963,
+    "timezone": "UTC",
+    "timezone_aware": true
+  },
+  "zip_inventory": {
+    "entry_count": 265,
+    "folder_count": 73,
+    "folders_with_data_corr": 42,
+    "folders_with_intensity": 2,
+    "folders_without_data_corr": 31,
+    "lineshape_folder_count": 73
+  }
+}

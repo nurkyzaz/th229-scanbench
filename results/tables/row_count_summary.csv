@@ -1,0 +1,8 @@
+dataset,row_count
+raw_csv_rows,428
+raw_unique_lorentzian_scan_keys,73
+literal_readme_subset_rows,72
+canonical_published_subset_rows,73
+strict_qc_subset_rows,41
+primary_peak_b_rows,55
+secondary_peaks_bc_rows,73
