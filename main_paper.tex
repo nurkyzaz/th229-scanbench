@@ -43,6 +43,8 @@ Precision spectroscopy increasingly produces time-domain data that look unlike s
 
 \thscan{} turns this record into an AI benchmark for weak-signal detection in precision physics.  Each input is a length-55 residual-frequency vector on the observed peak-b timestamps.  Labels are created by adding or not adding a controlled time-dependent frequency shift to residual draws from a training-fit, crystal-aware null model.  The benchmark is therefore not a claim about the observed JILA series.  Its purpose is methodological: compare physics-informed periodogram methods, simulator-trained inference, and supervised ML baselines under a leakage-controlled protocol on a sparse real cadence.
 
+The physics motivation is broader than timekeeping.  A \(^{229}\)Th nuclear clock is a proposed probe of beyond-standard-model effects because its unusually low-energy nuclear transition depends on a fine balance between electromagnetic Coulomb and strong-interaction nuclear contributions~\citep{beeks2021thorium}.  Direct frequency-ratio spectroscopy has now linked the \(^{229m}\)Th transition to a \(^{87}\)Sr optical atomic clock~\citep{zhang2024frequency}, and recent work estimates the fine-structure sensitivity coefficient as \(K=5900(2300)\), orders of magnitude larger than many electronic atomic-clock transitions~\citep{beeks2025fine}.  This makes sparse, uncertainty-aware frequency records from early nuclear-clock platforms scientifically useful even before mature long-duration clock comparisons are available.
+
 The main results are threefold.  First, simulation-based inference (SBI) with neural posterior estimation is the strongest primary-task baseline after careful prior parameterization, reaching AUROC 0.793.  Second, supervised neural sequence models trained on the 1,848 training examples are competitive but do not exceed SBI; the best Transformer reaches AUROC 0.769.  Third, a damped-sinusoid stress test exposes signal-family mismatch: methods trained or designed for persistent sinusoids lose substantial AUROC when the signal decays before most observations.  These outcomes make the benchmark useful not only as a leaderboard, but as a controlled testbed for data efficiency, prior specification, and robustness to physically motivated distribution shift.
 
 This work targets two themes the AI4Physics community has identified as underserved: dataset-building in physics areas where public records are sparse, and likelihood-free inference on small, structured precision-physics data.  \thscan{} provides a leakage-controlled testbed for both.  An anonymous release is available at \anonrepo{}.
@@ -56,7 +58,7 @@ Simulation-based inference (SBI) replaces an explicit likelihood with samples fr
 Our SBI baseline uses the sbi package~\citep{tejero2020sbi}, which provides implementations of SNPE-style inference methods and neural density estimators.  The v2 posterior uses neural spline flows~\citep{durkan2019neural}, chosen because they can represent non-Gaussian marginal posteriors while remaining cheap enough for a reproducible workshop benchmark.  The learned-null diagnostic also uses a conditional spline flow, but Section~\ref{sec:nulls} shows that additional flexibility is not automatically beneficial when the observation-level training set is small.
 
 \paragraph{Physics time-series benchmarks.}
-Physics ML benchmarks often emphasize large-sample regimes, such as collider anomaly challenges or astronomical classification tasks.  PLAsTiCC, for example, evaluates classification of simulated LSST-like transient time series at much larger scale~\citep{kessler2019plasticc}.  Such benchmarks are valuable, but they do not isolate the sparse-cadence, heteroscedastic, real-metadata regime common in precision measurements.  The thorium-229 nuclear transition also has independent motivation for searches for ultralight dark matter and other slowly varying effects~\citep{fuchs2025searching}, but translating Hz-scale amplitude limits into coupling constraints is model-dependent and outside the scope of this benchmark.
+Physics ML benchmarks often emphasize large-sample regimes, such as collider anomaly challenges or astronomical classification tasks.  PLAsTiCC, for example, evaluates classification of simulated LSST-like transient time series at much larger scale~\citep{kessler2019plasticc}.  Such benchmarks are valuable, but they do not isolate the sparse-cadence, heteroscedastic, real-metadata regime common in precision measurements.  The thorium-229 nuclear transition also has independent motivation for searches for ultralight dark matter and other slowly varying effects~\citep{fuchs2025searching}.  A contemporaneous analysis of the same spectroscopy platform uses Lomb--Scargle and lineshape methods to set ultralight-dark-matter limits from stable data subsets~\citep{arakawa2026probing}.  \thscan{} is complementary: it does not claim a dark-matter detection or coupling bound, but provides a fixed-split benchmark for leakage-controlled method comparison in the same sparse-cadence precision-physics regime.
 
 \section{Data and Benchmark Protocol}
 
@@ -253,11 +255,11 @@ All stress-test evaluations are zero-shot: no supervised model is retrained, no 
 
 The headline AUROC and AP intervals in Table~\ref{tab:main} are computed by resampling the 1,320 test examples with replacement for 1,000 bootstrap replicates using a fixed seed.  This preserves the already-frozen predictions and therefore does not change any baseline score, threshold, or trained checkpoint.  The resulting table is saved as results/tables/headline\_metrics\_with\_ci.csv in the release.  The null-model diagnostics in Table~\ref{tab:null-appendix} report the X2-only p-value and validation held-out log likelihood side by side, emphasizing that the more flexible conditional flow does not improve held-out calibration.
 
-\begin{table}[h!]
+\begin{center}
   \centering
   \scriptsize
   \setlength{\tabcolsep}{4pt}
-  \caption{Observed X2-only p-values and validation held-out log likelihood by null model.}
+  \captionof{table}{Observed X2-only p-values and validation held-out log likelihood by null model.}
   \label{tab:null-appendix}
   \begin{tabular}{lcc}
     \toprule
@@ -268,6 +270,6 @@ The headline AUROC and AP intervals in Table~\ref{tab:main} are computed by resa
     Conditional flow & 0.00195 & \(-15.34\) \\
     \bottomrule
   \end{tabular}
-\end{table}
+\end{center}
 
 \end{document}
