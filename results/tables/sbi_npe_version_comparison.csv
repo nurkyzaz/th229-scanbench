@@ -1,0 +1,4 @@
+version,checkpoint_path,simulator_null,roc_auc,average_precision,validation_fpr5_threshold,test_null_false_positive_rate,oop_median_A_hz,oop_median_log_period_days,oop_median_phi_rad,oop_median_any_axis,note
+v1,models/sbi_npe_v1.pt,crystal_gaussian_x2_mixture,0.7280589990817263,0.7870485025738739,0.5703125,0.05757575757575758,0.495,0.011,0.008,0.5035000000000001,point-mass prior + unbounded posterior coordinates + parametric null
+v2,models/sbi_npe_v2.pt,crystal_gaussian_x2_mixture,0.7930429292929292,0.8464428644863473,0.7074218749999996,0.03484848484848485,0.0,0.0,0.0,0.0,continuous prior + bounded reparameterization + parametric null (headline)
+v3,models/sbi_npe_v3.pt,conditional_spline_flow,0.4558780991735537,0.475753557823702,1.0,0.24545454545454545,0.0,0.0,0.0,0.0,continuous prior + bounded reparameterization + conditional flow null

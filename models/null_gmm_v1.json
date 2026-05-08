@@ -1,0 +1,6 @@
+{
+  "model": "crystal_gmm",
+  "n_components": 3,
+  "seed": 22902671,
+  "trained_rows": 37
+}

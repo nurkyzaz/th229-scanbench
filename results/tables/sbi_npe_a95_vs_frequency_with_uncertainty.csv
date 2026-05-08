@@ -1,0 +1,13 @@
+baseline,period_days,frequency_hz,a95_hz,a95_bootstrap_median_hz,a95_lower_hz,a95_upper_hz,a95_std_hz,bootstrap_replicates,finite_bootstrap_replicates,n_test_phases_per_cell,uncertainty_source
+sbi_npe,7.0,1.6534391534391535e-06,2112.5,2112.5,2025.0,2141.6666666666665,220.2717737893319,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+sbi_npe,10.0,1.1574074074074074e-06,2950.0,2950.0,2025.0,3075.0,641.0167057755464,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+sbi_npe,14.0,8.267195767195768e-07,2025.0,2025.0,1458.3333333333333,2112.5,310.2345271009588,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+sbi_npe,21.0,5.511463844797178e-07,1375.0,1375.0,979.1666666666666,1437.5,251.36546708918726,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+sbi_npe,30.0,3.8580246913580245e-07,1458.3333333333333,1458.3333333333333,1375.0,1468.75,229.0884324986478,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+sbi_npe,45.0,2.57201646090535e-07,2112.5,2112.5,2025.0,2141.6666666666665,186.50325079829932,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+sbi_npe,60.0,1.9290123456790122e-07,2025.0,2025.0,1468.75,2112.5,307.2835154769194,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+sbi_npe,90.0,1.286008230452675e-07,1468.75,1468.75,1458.3333333333333,1475.0,97.91497613788879,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+sbi_npe,120.0,9.645061728395061e-08,1437.5,1437.5,1375.0,1458.3333333333333,173.30311949961722,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+sbi_npe,180.0,6.430041152263375e-08,979.1666666666666,979.1666666666666,968.75,984.375,57.72641867482196,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+sbi_npe,240.0,4.8225308641975306e-08,2025.0,1375.0,937.5,2112.5,521.9561023932193,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+sbi_npe,365.0,3.1709791983764586e-08,1468.75,1468.75,1458.3333333333333,1475.0,56.87088431995174,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell

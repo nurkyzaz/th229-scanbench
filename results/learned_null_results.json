@@ -1,0 +1,29 @@
+{
+  "observed_series_pvalues": "results/tables/observed_series_pvalues_by_null.csv",
+  "test_null_fpr": "results/tables/test_null_fpr_by_null_model.csv",
+  "heldout_loglik": "results/tables/null_model_heldout_loglik.csv",
+  "calibration_plot": "results/figures/null_model_calibration_by_crystal.png",
+  "x2_pvalues": [
+    {
+      "null_model": "crystal_gaussian_x2_mixture",
+      "empirical_pvalue": 0.005847953216374269
+    },
+    {
+      "null_model": "crystal_gmm_3comp",
+      "empirical_pvalue": 0.001949317738791423
+    },
+    {
+      "null_model": "conditional_spline_flow",
+      "empirical_pvalue": 0.001949317738791423
+    }
+  ],
+  "best_heldout_loglik": {
+    "null_model": "crystal_gaussian_x2_mixture",
+    "n_holdout": 18,
+    "mean_loglik": -9.116197559057527,
+    "mean_loglik_bootstrap_lower": -9.294541355256445,
+    "mean_loglik_bootstrap_upper": -8.922751534570207,
+    "bootstrap_replicates": 1000
+  },
+  "fpr_rows": 15
+}

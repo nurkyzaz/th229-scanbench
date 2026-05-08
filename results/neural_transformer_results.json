@@ -1,0 +1,82 @@
+{
+  "baseline": "neural_transformer",
+  "roc_auc": 0.7688108356290174,
+  "average_precision": 0.8294155277967352,
+  "validation_fpr5_threshold": 0.522676771879196,
+  "tpr_at_validation_fpr_5pct": 0.5166666666666667,
+  "test_null_false_positive_rate": 0.05,
+  "runtime_sec": 0.7391440420033177,
+  "training_protocol": "train split only; validation split used for early stopping, hyperparameter selection, and 5% null threshold calibration",
+  "best_validation_auroc": 0.760734618916437,
+  "selected_hyperparameters": {
+    "learning_rate": 0.001,
+    "weight_decay": 0.0
+  },
+  "best_epoch": 56,
+  "epochs_ran_selected": 76,
+  "candidate_grid": [
+    {
+      "learning_rate": 0.001,
+      "weight_decay": 0.0,
+      "best_validation_auroc": 0.760734618916437,
+      "best_epoch": 56,
+      "epochs_ran": 76,
+      "num_parameters": 75521
+    },
+    {
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "best_validation_auroc": 0.752876492194674,
+      "best_epoch": 41,
+      "epochs_ran": 61,
+      "num_parameters": 75521
+    },
+    {
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0,
+      "best_validation_auroc": 0.7511179981634528,
+      "best_epoch": 92,
+      "epochs_ran": 112,
+      "num_parameters": 75521
+    },
+    {
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0001,
+      "best_validation_auroc": 0.7549885215794306,
+      "best_epoch": 52,
+      "epochs_ran": 72,
+      "num_parameters": 75521
+    },
+    {
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0,
+      "best_validation_auroc": 0.7445156106519744,
+      "best_epoch": 88,
+      "epochs_ran": 108,
+      "num_parameters": 75521
+    },
+    {
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "best_validation_auroc": 0.7487075298438935,
+      "best_epoch": 34,
+      "epochs_ran": 54,
+      "num_parameters": 75521
+    }
+  ],
+  "feature_stats": {
+    "residual_mean": -45.22312545776367,
+    "residual_std": 4040.35302734375,
+    "unc_mean": 2000.9217529296875,
+    "unc_std": 2292.80810546875,
+    "temp_mean": 211.18963623046875,
+    "temp_std": 51.17200469970703
+  },
+  "device": "mps",
+  "training_runtime_sec": 621.6568737080015,
+  "checkpoint_path": "models/neural_transformer_v1.pt",
+  "predictions_path": "results/tables/neural_transformer_predictions.csv",
+  "a95_path": "results/tables/neural_transformer_a95_vs_frequency_with_uncertainty.csv",
+  "representative_table_path": "results/tables/neural_transformer_representative_frequency_table.csv",
+  "n_bootstrap": 500
+}

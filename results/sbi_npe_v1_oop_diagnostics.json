@@ -1,0 +1,29 @@
+{
+  "baseline": "sbi_npe",
+  "checkpoint_path": "models/sbi_npe_v1.pt",
+  "num_posterior_samples": 1000,
+  "n_examples": 1320,
+  "posterior_sampling": "direct with reject_outside_prior=False",
+  "stats": {
+    "A_hz": {
+      "mean": 0.47408409090909087,
+      "median": 0.495,
+      "p95": 0.582
+    },
+    "log_period_days": {
+      "mean": 0.011803787878787879,
+      "median": 0.011,
+      "p95": 0.022
+    },
+    "phi_rad": {
+      "mean": 0.009443181818181818,
+      "median": 0.008,
+      "p95": 0.018
+    },
+    "any_axis": {
+      "mean": 0.48416363636363635,
+      "median": 0.5035000000000001,
+      "p95": 0.59
+    }
+  }
+}

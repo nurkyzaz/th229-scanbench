@@ -1,0 +1,22 @@
+{
+  "catalog": "data/interim/drift_sanity_catalog.csv",
+  "global_seed": 229057,
+  "minimum_detectable_abs_slope_hz_per_day": 14.375,
+  "role": "secondary stress test, not a replacement for the sinusoidal main task",
+  "slope_abs_hz_per_day_grid": [
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    7.5,
+    10.0,
+    15.0,
+    20.0,
+    30.0,
+    45.0,
+    65.0
+  ],
+  "task": "linear_drift_sanity",
+  "threshold_calibration": "validation null examples only"
+}

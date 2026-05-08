@@ -1,0 +1,16 @@
+null_model,baseline,validation_fpr5_threshold,test_null_false_positive_rate,n_validation_null,n_test_null
+crystal_gaussian_x2_mixture,weighted_harmonic_regression,94.44846129370676,0.04393939393939394,660,660
+crystal_gaussian_x2_mixture,generalized_lomb_scargle,94.54549136108348,0.05,660,660
+crystal_gaussian_x2_mixture,hierarchical_sinusoid_jitter,7.005974153314317,0.03787878787878788,660,660
+crystal_gaussian_x2_mixture,random_forest_periodogram_features,0.61,0.0696969696969697,660,660
+crystal_gaussian_x2_mixture,sbi_npe,0.65625,0.05606060606060606,660,660
+crystal_gmm_3comp,weighted_harmonic_regression,170.65162014731067,0.06363636363636363,660,660
+crystal_gmm_3comp,generalized_lomb_scargle,205.76799229385037,0.05454545454545454,660,660
+crystal_gmm_3comp,hierarchical_sinusoid_jitter,5.145090237149028,0.07121212121212121,660,660
+crystal_gmm_3comp,random_forest_periodogram_features,0.84,0.06515151515151515,660,660
+crystal_gmm_3comp,sbi_npe,0.96875,0.06212121212121212,660,660
+conditional_spline_flow,weighted_harmonic_regression,41.17300783573927,0.04696969696969697,660,660
+conditional_spline_flow,generalized_lomb_scargle,58.63277057319777,0.03939393939393939,660,660
+conditional_spline_flow,hierarchical_sinusoid_jitter,7.468192338558533,0.04696969696969697,660,660
+conditional_spline_flow,random_forest_periodogram_features,0.6004999999999995,0.04090909090909091,660,660
+conditional_spline_flow,sbi_npe,0.84375,0.048484848484848485,660,660

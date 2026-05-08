@@ -1,0 +1,3 @@
+baseline,selected_learning_rate,selected_weight_decay,best_validation_auroc,test_auroc,test_average_precision,validation_fpr5_threshold,test_null_false_positive_rate,checkpoint_path
+neural_transformer,0.001,0.0,0.760734618916437,0.7688108356290174,0.8294155277967352,0.522676771879196,0.05,models/neural_transformer_v1.pt
+neural_cnn,0.001,0.0,0.7465013774104683,0.758032598714417,0.8172685288949996,0.8176007479429245,0.04242424242424243,models/neural_cnn_v1.pt

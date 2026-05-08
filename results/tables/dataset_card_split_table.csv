@@ -1,0 +1,4 @@
+split,n_null,n_injected,n_total,purpose
+train,1848,1848,3696,fit learned baselines and observation-level null components
+validation,660,660,1320,calibrate detection thresholds on null examples and early stopping only
+test,660,660,1320,"final held-out AUROC, AP, FPR, and A95 reporting"

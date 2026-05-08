@@ -168,44 +168,51 @@ class FittedNullModel:
             return samples
         raise ValueError(f"Unknown null distribution: {self.distribution}")
 
-    def nll(self, df: pd.DataFrame) -> float:
-        residual = df["residual_hz"].to_numpy(dtype=np.float64)
+    def log_prob(self, residual_hz: np.ndarray, df: pd.DataFrame) -> np.ndarray:
+        residual = np.asarray(residual_hz, dtype=np.float64)
         scale = self.effective_sigma(df)
         if self.distribution == "gaussian":
-            return _gaussian_nll(residual, scale)
+            return norm.logpdf(residual, loc=0.0, scale=np.maximum(scale, 1e-9))
         if self.distribution == "student_t":
-            return _student_nll(residual, scale, df=float(self.parameters["student_t_df"]))
+            return student_t.logpdf(residual, df=float(self.parameters["student_t_df"]), loc=0.0, scale=np.maximum(scale, 1e-9))
         if self.distribution == "student_t_target_df":
-            total = 0.0
+            out = np.zeros(len(df), dtype=np.float64)
             jitters = self.parameters["crystal_jitter_hz"]
             dfs = self.parameters["crystal_student_t_df"]
             for target, group in df.groupby("target"):
-                group_residual = group["residual_hz"].to_numpy(dtype=np.float64)
+                indexer = df.index.get_indexer(group.index)
                 group_sigma = group["freq_unc_hz"].to_numpy(dtype=np.float64)
                 jitter = float(jitters.get(target, 0.0))
                 group_scale = np.sqrt(group_sigma**2 + jitter**2)
-                total += _student_nll(group_residual, group_scale, df=float(dfs.get(target, 4.0)))
-            return float(total)
+                out[indexer] = student_t.logpdf(
+                    residual[indexer],
+                    df=float(dfs.get(target, 4.0)),
+                    loc=0.0,
+                    scale=np.maximum(group_scale, 1e-9),
+                )
+            return out
         if self.distribution == "x2_gaussian_mixture":
+            out = np.zeros(len(df), dtype=np.float64)
             jitters = self.parameters["crystal_jitter_hz"]
-            total = 0.0
             for target, group in df.groupby("target"):
-                group_residual = group["residual_hz"].to_numpy(dtype=np.float64)
+                indexer = df.index.get_indexer(group.index)
                 group_sigma = group["freq_unc_hz"].to_numpy(dtype=np.float64)
                 jitter = float(jitters.get(target, 0.0))
+                core_scale = np.sqrt(group_sigma**2 + jitter**2)
                 if target == "X2":
-                    total += _x2_mixture_nll(
-                        group_residual,
-                        group_sigma,
-                        jitter,
-                        float(self.parameters["x2_outlier_probability"]),
-                        float(self.parameters["x2_outlier_scale_multiplier"]),
-                    )
+                    probability = float(self.parameters["x2_outlier_probability"])
+                    multiplier = float(self.parameters["x2_outlier_scale_multiplier"])
+                    log_core = np.log1p(-probability) + norm.logpdf(residual[indexer], loc=0.0, scale=core_scale)
+                    log_outlier = np.log(probability) + norm.logpdf(residual[indexer], loc=0.0, scale=core_scale * multiplier)
+                    out[indexer] = logsumexp(np.vstack([log_core, log_outlier]), axis=0)
                 else:
-                    group_scale = np.sqrt(group_sigma**2 + jitter**2)
-                    total += _gaussian_nll(group_residual, group_scale)
-            return float(total)
+                    out[indexer] = norm.logpdf(residual[indexer], loc=0.0, scale=np.maximum(core_scale, 1e-9))
+            return out
         raise ValueError(f"Unknown null distribution: {self.distribution}")
+
+    def nll(self, df: pd.DataFrame) -> float:
+        residual = df["residual_hz"].to_numpy(dtype=np.float64)
+        return float(-np.sum(self.log_prob(residual, df)))
 
     def standardized(self, df: pd.DataFrame) -> np.ndarray:
         return df["residual_hz"].to_numpy(dtype=np.float64) / self.effective_sigma(df)
@@ -231,8 +238,17 @@ def _summarize_model(name: str, distribution: str, params: dict[str, Any], train
     return model
 
 
-def fit_null_models(primary_peak_b: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, FittedNullModel], str]:
-    """Fit formal, crystal-aware Gaussian, Student-t, and X2 mixture null models."""
+def fit_null_models(
+    primary_peak_b: pd.DataFrame,
+    model_names: list[str] | tuple[str, ...] | None = None,
+) -> tuple[pd.DataFrame, dict[str, Any], str]:
+    """Fit null models.
+
+    By default this preserves the original parametric model family. Passing
+    ``model_names`` can request the learned additions without changing the
+    default headline null model.
+    """
+    requested = set(model_names or ())
     split_df = assign_null_fit_split(primary_peak_b)
     train = split_df.loc[split_df["null_fit_split"].eq("train")].copy()
     holdout = split_df.loc[split_df["null_fit_split"].eq("holdout")].copy()
@@ -300,8 +316,32 @@ def fit_null_models(primary_peak_b: pd.DataFrame) -> tuple[pd.DataFrame, dict[st
             holdout,
         )
 
-    # Choose the default by held-out negative log likelihood, but require a clean model.
+    # Preserve the original default selection across learned-null additions.
     default_name = min(models, key=lambda key: models[key].holdout_nll_per_point)
+
+    if "gmm" in requested or "crystal_gmm_3comp" in requested:
+        from null_models.gmm import fit_gmm_null
+
+        gmm = fit_gmm_null(primary_peak_b)
+        models[gmm.name] = gmm
+
+    if "normalizing_flow" in requested or "conditional_spline_flow" in requested:
+        from null_models.normalizing_flow import fit_flow_null
+
+        flow = fit_flow_null(primary_peak_b)
+        models[flow.name] = flow
+
+    unknown = requested - {
+        "crystal_gaussian_x2_mixture",
+        "parametric",
+        "gmm",
+        "crystal_gmm_3comp",
+        "normalizing_flow",
+        "conditional_spline_flow",
+    }
+    if unknown:
+        raise ValueError(f"Unknown null model request(s): {sorted(unknown)}")
+
     return split_df, models, default_name
 
 

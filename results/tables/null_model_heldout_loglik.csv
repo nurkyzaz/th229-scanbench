@@ -1,0 +1,4 @@
+null_model,n_holdout,mean_loglik,mean_loglik_bootstrap_lower,mean_loglik_bootstrap_upper,bootstrap_replicates
+crystal_gaussian_x2_mixture,18,-9.116197559057527,-9.294541355256445,-8.922751534570207,1000
+crystal_gmm_3comp,18,-9.4134361416561,-9.675046336147341,-9.12105067496851,1000
+conditional_spline_flow,18,-15.344797270829575,-16.07829736736261,-14.568909391034078,1000

@@ -476,20 +476,30 @@ def _plot_outputs(
     figures["final_sensitivity_heatmap_main_baseline"] = str(heatmap_path)
 
     a95_path = FIGURES_DIR / "final_a95_vs_frequency_with_uncertainty.png"
-    fig, ax = plt.subplots(figsize=(8, 5))
+    fig, ax = plt.subplots(figsize=(8.4, 5.1))
+    styles = {
+        "weighted_harmonic_regression": ("Weighted harmonic", "--", "o"),
+        "generalized_lomb_scargle": ("GLS", "--", "s"),
+        "hierarchical_sinusoid_jitter": ("Hierarchical", "--", "^"),
+        "random_forest_periodogram_features": ("Random forest", ":", "D"),
+        "sbi_npe": ("SBI NPE v2", "-", "P"),
+        "neural_cnn": ("Neural CNN", "-", "X"),
+        "neural_transformer": ("Neural Transformer", "-", "v"),
+    }
     for baseline, group in a95_uncertainty_df.groupby("baseline"):
         group = group.sort_values("period_days")
         x = group["period_days"].to_numpy(dtype=np.float64)
         y = group["a95_hz"].to_numpy(dtype=np.float64)
         low = group["a95_lower_hz"].to_numpy(dtype=np.float64)
         high = group["a95_upper_hz"].to_numpy(dtype=np.float64)
-        ax.plot(x, y, marker="o", lw=2, label=baseline)
-        ax.fill_between(x, low, high, alpha=0.18)
+        label, linestyle, marker = styles.get(baseline, (baseline, "-", "o"))
+        line = ax.plot(x, y, marker=marker, linestyle=linestyle, lw=2, label=label)[0]
+        ax.fill_between(x, low, high, color=line.get_color(), alpha=0.15, linewidth=0)
     ax.set_xscale("log")
     ax.set_xlabel("Injected period (days)")
     ax.set_ylabel("A95 amplitude (Hz)")
     ax.set_title("A95 sensitivity with bootstrap intervals")
-    ax.legend(frameon=False)
+    ax.legend(frameon=False, fontsize=8, ncol=2)
     fig.tight_layout()
     fig.savefig(a95_path, dpi=200)
     plt.close(fig)
@@ -1048,6 +1058,25 @@ def run_benchmark_suite(primary_df: pd.DataFrame, secondary_bc_df: pd.DataFrame 
     write_json(protocol, TABLES_DIR / "benchmark_protocol_fixed.json")
     write_json(protocol, TABLES_DIR / "benchmark_protocol.json")
     split_counts.to_csv(TABLES_DIR / "split_counts_fixed.csv", index=False)
+    split_purpose = {
+        "train": "fit learned baselines and observation-level null components",
+        "validation": "calibrate detection thresholds on null examples and early stopping only",
+        "test": "final held-out AUROC, AP, FPR, and A95 reporting",
+    }
+    dataset_card_rows = []
+    for split in ("train", "validation", "test"):
+        n_null = int(split_counts.loc[split_counts["split"].eq(split) & split_counts["label"].eq(0), "count"].iloc[0])
+        n_injected = int(split_counts.loc[split_counts["split"].eq(split) & split_counts["label"].eq(1), "count"].iloc[0])
+        dataset_card_rows.append(
+            {
+                "split": split,
+                "n_null": n_null,
+                "n_injected": n_injected,
+                "n_total": n_null + n_injected,
+                "purpose": split_purpose[split],
+            }
+        )
+    pd.DataFrame(dataset_card_rows).to_csv(TABLES_DIR / "dataset_card_split_table.csv", index=False)
 
     leakage = "\n".join(
         [

@@ -1,0 +1,21 @@
+{
+  "model": "conditional_neural_spline_flow",
+  "seed": 22902672,
+  "trained_rows": 37,
+  "transforms": 3,
+  "hidden_width": 64,
+  "best_train_nll_standardized": -2.473296880722046,
+  "context": [
+    "target_one_hot_C10_C13_X2",
+    "log_freq_unc_hz_z",
+    "temp_k_z"
+  ],
+  "stats": {
+    "residual_mean": 261.05906362212016,
+    "residual_std": 3551.466164283058,
+    "log_sigma_mean": 7.364328214632978,
+    "log_sigma_std": 0.7855477383724488,
+    "temp_mean": 216.0764864864865,
+    "temp_std": 56.53014131279358
+  }
+}

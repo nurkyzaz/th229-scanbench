@@ -36,15 +36,26 @@ python -m pip install -r requirements.txt
 Run the full benchmark and tests from the repository root:
 
 ```bash
-PYTHONPATH=src python benchmark/run_all.py
-PYTHONPATH=src python -m pytest -q
+make reproduce
 ```
+
+Equivalent explicit commands:
+
+```bash
+PYTHONPATH=.:src python benchmark/run_all.py
+python run_benchmark.py --baseline rf
+PYTHONPATH=.:src:tests python tests/run_smoke_checks.py
+```
+
+In a standard Python environment, `PYTHONPATH=src python -m pytest -q` runs the same checked assertions through pytest.
 
 Run only the random-forest baseline:
 
 ```bash
 python run_benchmark.py --baseline rf
 ```
+
+The random-forest rerun also refreshes `results/tables/rf_a95_vs_frequency_with_uncertainty.csv` and fills the RF A95 columns in `results/tables/final_representative_frequency_baseline_table_with_rf.csv`.
 
 ## Source Inputs
 
@@ -104,7 +115,9 @@ The random-forest baseline is included to show that the benchmark is usable by g
 - `data/interim/benchmark_catalog.csv`
 - `data/interim/benchmark_arrays.npz`
 - `results/tables/baseline_comparison_with_rf.csv`
+- `results/tables/dataset_card_split_table.csv`
 - `results/tables/final_representative_frequency_baseline_table_with_rf.csv`
+- `results/tables/rf_a95_vs_frequency_with_uncertainty.csv`
 - `results/tables/a95_vs_frequency_with_uncertainty.csv`
 - `results/tables/observed_series_false_alarm_behavior.csv`
 - `results/tables/subset_reconciliation_scan_keys.csv`

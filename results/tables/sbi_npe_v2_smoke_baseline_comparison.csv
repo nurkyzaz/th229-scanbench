@@ -1,0 +1,2 @@
+baseline,roc_auc,average_precision,validation_fpr5_threshold,tpr_at_validation_fpr_5pct,test_null_false_positive_rate,runtime_sec
+sbi_npe,0.5505612947658403,0.5624115279829899,0.671875,0.14545454545454545,0.08181818181818182,16.388652082998306

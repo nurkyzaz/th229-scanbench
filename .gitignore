@@ -1,4 +1,5 @@
 .DS_Store
+Thumbs.db
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -7,6 +8,8 @@ __pycache__/
 .venv/
 venv/
 env/
+.env
+.envrc
 
 # LaTeX build byproducts
 *.aux
@@ -28,3 +31,9 @@ dist/
 # Local exploratory scratch files
 tmp/
 scratch/
+
+# Local reference/submission PDFs; keep main_paper.pdf tracked explicitly.
+Fuchs_2025.pdf
+probing_ULDM_Th229_Arakawa_Feb2026.pdf
+th229_scanbench_pai26.pdf
+th229_submission.pdf

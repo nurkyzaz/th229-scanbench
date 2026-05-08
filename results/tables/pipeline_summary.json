@@ -1,0 +1,156 @@
+{
+  "audit_outputs": {
+    "file_audit_path": "results/tables/file_audit.md",
+    "json_path": "results/tables/preprocessing_audit.json"
+  },
+  "benchmark_figures": {
+    "final_a95_vs_frequency_with_uncertainty": "results/figures/final_a95_vs_frequency_with_uncertainty.png",
+    "final_ablation_remove_x2": "results/figures/final_ablation_remove_x2.png",
+    "final_auc_heatmap_with_a95_contour": "results/figures/final_auc_heatmap_with_a95_contour.png",
+    "final_drift_sanity_curve": "results/figures/final_drift_sanity_curve.png",
+    "final_generalization_summary": "results/figures/final_generalization_summary.png",
+    "final_null_model_calibration_comparison": "results/figures/final_null_model_calibration_comparison.png",
+    "final_observed_series_periodogram_calibration": "results/figures/final_observed_series_periodogram_calibration.png",
+    "final_roc_curve_main_baseline": "results/figures/final_roc_curve_main_baseline.png",
+    "final_sensitivity_heatmap_main_baseline": "results/figures/final_sensitivity_heatmap_main_baseline.png"
+  },
+  "counts": {
+    "canonical_published_subset_rows": 73,
+    "literal_readme_subset_rows": 72,
+    "primary_peak_b_rows": 55,
+    "raw_csv_rows": 428,
+    "raw_unique_lorentzian_scan_keys": 73,
+    "secondary_peaks_bc_rows": 73,
+    "strict_qc_subset_rows": 41
+  },
+  "default_null_model": "crystal_gaussian_x2_mixture",
+  "diagnostic_figures": {
+    "real_temperature_corrected_residuals_by_crystal": "results/figures/final_peak_b_residuals_over_time_by_crystal.png",
+    "residual_scatter_uncertainty_behavior": "results/figures/final_residual_scatter_uncertainty_by_crystal.png"
+  },
+  "diagnostic_tables": {
+    "drift_checks": "results/tables/drift_checks.csv",
+    "main_preprocessing_dataset_summary": "results/tables/main_preprocessing_dataset_summary.csv",
+    "per_crystal_peak_counts": "results/tables/per_crystal_peak_counts.csv",
+    "preprocessing_summary": "results/tables/preprocessing_summary.csv",
+    "row_count_summary": "results/tables/row_count_summary.csv",
+    "subset_reconciliation_scan_keys": "results/tables/subset_reconciliation_scan_keys.csv",
+    "uncertainty_diagnostics": "results/tables/uncertainty_diagnostics.csv"
+  },
+  "generalization": [
+    {
+      "average_precision": 0.7693450931017487,
+      "baseline": "weighted_harmonic_regression",
+      "generalization_task": "off_grid_heldout_periods",
+      "heldout_periods_days": "8.5|17.0|36.0|75.0|150.0|300.0",
+      "roc_auc": 0.7215426997245179,
+      "runtime_sec": 4.533115332997113,
+      "source_periods_days": "7.0|10.0|14.0|21.0|30.0|45.0|60.0|90.0|120.0|180.0|240.0|365.0",
+      "source_validation_fpr5_threshold": 95.55615801844245,
+      "target_test_examples": 660,
+      "target_test_null_false_positive_rate": 0.03939393939393939,
+      "tpr_at_source_validation_fpr_5pct": 0.3575757575757576
+    },
+    {
+      "average_precision": 0.7802014109789903,
+      "baseline": "generalized_lomb_scargle",
+      "generalization_task": "off_grid_heldout_periods",
+      "heldout_periods_days": "8.5|17.0|36.0|75.0|150.0|300.0",
+      "roc_auc": 0.7332047750229568,
+      "runtime_sec": 4.397185124995303,
+      "source_periods_days": "7.0|10.0|14.0|21.0|30.0|45.0|60.0|90.0|120.0|180.0|240.0|365.0",
+      "source_validation_fpr5_threshold": 94.81528010921642,
+      "target_test_examples": 660,
+      "target_test_null_false_positive_rate": 0.045454545454545456,
+      "tpr_at_source_validation_fpr_5pct": 0.38181818181818183
+    },
+    {
+      "average_precision": 0.8577212895387869,
+      "baseline": "hierarchical_sinusoid_jitter",
+      "generalization_task": "off_grid_heldout_periods",
+      "heldout_periods_days": "8.5|17.0|36.0|75.0|150.0|300.0",
+      "roc_auc": 0.8078971533516988,
+      "runtime_sec": 4.532574583005044,
+      "source_periods_days": "7.0|10.0|14.0|21.0|30.0|45.0|60.0|90.0|120.0|180.0|240.0|365.0",
+      "source_validation_fpr5_threshold": 6.958917084749557,
+      "target_test_examples": 660,
+      "target_test_null_false_positive_rate": 0.02727272727272727,
+      "tpr_at_source_validation_fpr_5pct": 0.5272727272727272
+    }
+  ],
+  "lineshape_audit": "results/tables/lineshape_audit.md",
+  "lineshape_manifest": "data/interim/lineshape_manifest.csv",
+  "processed_paths": {
+    "canonical_published_subset": "data/processed/canonical_published_subset.csv",
+    "primary_peak_b": "data/processed/primary_peak_b.csv",
+    "processed_default": "data/processed/processed_default.csv",
+    "secondary_peaks_bc": "data/processed/secondary_peaks_bc.csv",
+    "strict_qc_subset": "data/processed/strict_qc_subset.csv"
+  },
+  "safe_outputs_for_future_paper": [
+    "results/tables/preprocessing_audit.json",
+    "results/tables/subset_reconciliation.md",
+    "results/tables/subset_reconciliation_scan_keys.csv",
+    "results/tables/null_model_comparison.csv",
+    "results/tables/x2_calibration_study.csv",
+    "results/tables/x2_handling_decision.md",
+    "results/tables/baseline_comparison.csv",
+    "results/tables/a95_vs_frequency_with_uncertainty.csv",
+    "results/tables/a95_uncertainty_notes.md",
+    "results/tables/generalization_protocol.json",
+    "results/tables/generalization_results.csv",
+    "results/tables/generalization_notes.md",
+    "results/tables/drift_sanity_results.csv",
+    "results/tables/drift_sanity_protocol.json",
+    "results/tables/drift_sanity_notes.md",
+    "results/tables/auc_heatmap_with_a95_contour.csv",
+    "results/tables/final_representative_frequency_baseline_table.csv",
+    "results/tables/benchmark_sensitivity_heatmap.csv",
+    "results/tables/observed_series_false_alarm_behavior.csv",
+    "results/tables/ablation_results.csv",
+    "results/figures/final_peak_b_residuals_over_time_by_crystal.png",
+    "results/figures/final_residual_scatter_uncertainty_by_crystal.png",
+    "results/figures/final_null_model_calibration_comparison.png",
+    "results/figures/final_sensitivity_heatmap_main_baseline.png",
+    "results/figures/final_a95_vs_frequency_with_uncertainty.png",
+    "results/figures/final_observed_series_periodogram_calibration.png",
+    "results/figures/final_generalization_summary.png",
+    "results/figures/final_auc_heatmap_with_a95_contour.png",
+    "results/figures/final_drift_sanity_curve.png",
+    "results/tables/figures_manifest.md"
+  ],
+  "split_counts": [
+    {
+      "count": 660,
+      "label": 0,
+      "split": "test"
+    },
+    {
+      "count": 660,
+      "label": 1,
+      "split": "test"
+    },
+    {
+      "count": 1848,
+      "label": 0,
+      "split": "train"
+    },
+    {
+      "count": 1848,
+      "label": 1,
+      "split": "train"
+    },
+    {
+      "count": 660,
+      "label": 0,
+      "split": "validation"
+    },
+    {
+      "count": 660,
+      "label": 1,
+      "split": "validation"
+    }
+  ],
+  "time_span_days": 487.7275462962963,
+  "x2_handling": "results/tables/x2_handling_decision.md"
+}

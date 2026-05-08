@@ -1,0 +1,13 @@
+baseline,period_days,frequency_hz,a95_hz,a95_bootstrap_median_hz,a95_lower_hz,a95_upper_hz,a95_std_hz,bootstrap_replicates,finite_bootstrap_replicates,n_test_phases_per_cell,uncertainty_source
+neural_transformer,7.0,1.6534391534391535e-06,2025.0,2025.0,979.1666666666666,2112.5,477.50574635940245,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+neural_transformer,10.0,1.1574074074074074e-06,2950.0,2950.0,2141.6666666666665,3075.0,550.2103813517355,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+neural_transformer,14.0,8.267195767195768e-07,1468.75,1468.75,1458.3333333333333,1475.0,9.934049016443968,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+neural_transformer,21.0,5.511463844797178e-07,1375.0,979.1666666666666,937.5,1437.5,313.13569839230865,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+neural_transformer,30.0,3.8580246913580245e-07,1458.3333333333333,1458.3333333333333,1437.5,1468.75,183.71265828998344,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+neural_transformer,45.0,2.57201646090535e-07,2950.0,2950.0,2025.0,3075.0,605.6894478911053,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+neural_transformer,60.0,1.9290123456790122e-07,2950.0,2950.0,2156.25,3075.0,429.36699215482713,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+neural_transformer,90.0,1.286008230452675e-07,1468.75,1468.75,1458.3333333333333,1475.0,12.061414027108663,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+neural_transformer,120.0,9.645061728395061e-08,1375.0,1375.0,984.375,1437.5,200.0821165948531,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+neural_transformer,180.0,6.430041152263375e-08,2112.5,2025.0,984.375,2141.6666666666665,529.395973657059,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+neural_transformer,240.0,4.8225308641975306e-08,984.375,984.375,979.1666666666666,2025.0,454.1871444037872,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell
+neural_transformer,365.0,3.1709791983764586e-08,1458.3333333333333,1458.3333333333333,1375.0,1468.75,135.12841229310055,500,500,5,validation-null threshold resampling plus test-phase resampling within each amplitude cell

@@ -1,0 +1,104 @@
+{
+  "baseline": "sbi_npe",
+  "roc_auc": 0.7930429292929292,
+  "average_precision": 0.8464428644863473,
+  "validation_fpr5_threshold": 0.7074218749999996,
+  "tpr_at_validation_fpr_5pct": 0.5303030303030303,
+  "test_null_false_positive_rate": 0.03484848484848485,
+  "runtime_sec": 24.964402540994342,
+  "checkpoint_path": "models/sbi_npe_v2.pt",
+  "training_metadata": {
+    "baseline": "sbi_npe",
+    "sbi_version_label": "v2",
+    "method": "SNPE-C/NPE neural spline flow via sbi; continuous log-uniform amplitude prior with bounded reparameterization",
+    "num_simulations": 100000,
+    "training_seed": 22902651,
+    "device": "mps",
+    "training_runtime_sec": 517.235886333001,
+    "sbi_version": "0.26.1",
+    "torch_version": "2.11.0",
+    "nflows_version": "0.14",
+    "density_estimator": {
+      "model": "nsf",
+      "hidden_features": 64,
+      "num_transforms": 4,
+      "num_bins": 8,
+      "theta_training_space": [
+        "u_log_amp_bounded",
+        "u_log_period_bounded",
+        "u_phi_bounded"
+      ],
+      "u_bound": 10.0,
+      "amplitude_transform": "u=logit((log(A_hz)-log(1))/(log(6500)-log(1)))",
+      "period_transform": "u=logit((log_period_days-log(7))/(log(365)-log(7)))",
+      "phi_transform": "u=logit(phi_rad/(2*pi))",
+      "detection_threshold_training_space": -0.21853290299953534
+    },
+    "simulator": {
+      "covariate_columns": [
+        "seconds_since_first_observation",
+        "target",
+        "freq_unc_hz",
+        "temp_k"
+      ],
+      "null_model_distribution": "x2_gaussian_mixture",
+      "null_model_name": "crystal_gaussian_x2_mixture",
+      "null_model_parameters": {
+        "crystal_jitter_hz": {
+          "C10": 1328.268921695911,
+          "C13": 332.9463313982849,
+          "X2": 2692.1331896505767
+        },
+        "x2_mixture_train_nll": 184.74420047937957,
+        "x2_outlier_probability": 0.02,
+        "x2_outlier_scale_multiplier": 2.0
+      },
+      "periods_days_for_evaluation": [
+        7.0,
+        10.0,
+        14.0,
+        21.0,
+        30.0,
+        45.0,
+        60.0,
+        90.0,
+        120.0,
+        180.0,
+        240.0,
+        365.0
+      ],
+      "primary_rows": 55,
+      "prior": {
+        "a_max_hz": 6500.0,
+        "a_min_hz": 1.0,
+        "log_period_max": 5.8998973535824915,
+        "log_period_min": 1.9459101490553132,
+        "max_period_days": 365.0,
+        "min_period_days": 7.0,
+        "pi_null": 0.0,
+        "seed": 22902651
+      },
+      "simulator": "th229_sbi_npe_v1",
+      "simulator_config_hash": "7d5e2ae5f9aedca2",
+      "temperature_correction": "assumed already applied in primary_peak_b residual_hz",
+      "theta": [
+        "A_hz",
+        "log_period_days",
+        "phi_rad"
+      ]
+    }
+  },
+  "num_posterior_samples": 256,
+  "posterior_sampling": "direct with reject_outside_prior=False to avoid low-acceptance stalls; score uses amplitude marginal only",
+  "n_bootstrap": 500,
+  "predictions_path": "results/tables/sbi_npe_predictions.csv",
+  "comparison_path": "results/tables/sbi_npe_baseline_comparison.csv",
+  "a95_path": "results/tables/sbi_npe_a95_vs_frequency_with_uncertainty.csv",
+  "representative_table_path": "results/tables/sbi_npe_representative_frequency_table.csv",
+  "out_of_prior_diagnostics_path": "results/sbi_npe_oop_diagnostics.json",
+  "out_of_prior_median_any_axis": 0.0,
+  "comparison_with_ml_path": "results/tables/baseline_comparison_with_ml.csv",
+  "representative_with_ml_path": "results/tables/final_representative_frequency_baseline_table_with_ml.csv",
+  "comparison_with_ml_rows": 5,
+  "representative_with_ml_rows": 10
+}

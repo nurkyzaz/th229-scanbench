@@ -1,0 +1,24 @@
+{
+  "summary_path": "results/tables/stress_damped_summary.csv",
+  "a95_paths": [
+    "results/tables/stress_damped_tau30_a95_vs_frequency.csv",
+    "results/tables/stress_damped_tau90_a95_vs_frequency.csv",
+    "results/tables/stress_damped_tau180_a95_vs_frequency.csv"
+  ],
+  "figure_path": "results/figures/stress_damped_auroc_degradation.png",
+  "taus_days": [
+    30.0,
+    90.0,
+    180.0
+  ],
+  "baselines": [
+    "weighted_harmonic_regression",
+    "generalized_lomb_scargle",
+    "hierarchical_sinusoid_jitter",
+    "random_forest_periodogram_features",
+    "sbi_npe",
+    "neural_cnn",
+    "neural_transformer"
+  ],
+  "n_bootstrap": 500
+}

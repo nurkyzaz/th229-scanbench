@@ -1,0 +1,2 @@
+baseline,roc_auc,average_precision,validation_fpr5_threshold,tpr_at_validation_fpr_5pct,test_null_false_positive_rate,runtime_sec
+neural_transformer,0.7688108356290174,0.8294155277967352,0.522676771879196,0.5166666666666667,0.05,0.7391440420033177

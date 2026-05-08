@@ -11,6 +11,9 @@
   "validation_fpr5_threshold": 0.62,
   "test_null_false_positive_rate": 0.0696969696969697,
   "test_signal_true_positive_rate": 0.4075757575757576,
+  "a95_path": "results/tables/rf_a95_vs_frequency_with_uncertainty.csv",
+  "representative_table_with_rf_path": "results/tables/final_representative_frequency_baseline_table_with_rf.csv",
+  "baseline_comparison_with_rf_path": "results/tables/baseline_comparison_with_rf.csv",
   "features": [
     "wls_power_7d",
     "wls_power_10d",
@@ -33,5 +36,7 @@
     "peak_to_peak_hz"
   ],
   "feature_importances_path": "results/rf_feature_importances.csv",
-  "predictions_path": "results/rf_baseline_predictions.csv"
+  "checkpoint_path": "models/random_forest_periodogram_features_v1.pkl",
+  "predictions_path": "results/rf_baseline_predictions.csv",
+  "all_predictions_path": "results/rf_baseline_all_predictions.csv"
 }

@@ -1,0 +1,97 @@
+{
+  "baseline": "sbi_npe",
+  "roc_auc": 0.5338957759412305,
+  "average_precision": 0.5385943661966212,
+  "validation_fpr5_threshold": 0.5625,
+  "tpr_at_validation_fpr_5pct": 0.15151515151515152,
+  "test_null_false_positive_rate": 0.10151515151515152,
+  "runtime_sec": 16.38207137500285,
+  "checkpoint_path": "models/sbi_npe_smoke.pt",
+  "training_metadata": {
+    "baseline": "sbi_npe",
+    "method": "SNPE-C/NPE neural spline flow via sbi",
+    "num_simulations": 5000,
+    "training_seed": 22902651,
+    "device": "mps",
+    "training_runtime_sec": 6.689214541998808,
+    "sbi_version": "0.26.1",
+    "torch_version": "2.11.0",
+    "nflows_version": "0.14",
+    "density_estimator": {
+      "model": "nsf",
+      "hidden_features": 64,
+      "num_transforms": 4,
+      "num_bins": 8,
+      "theta_training_space": [
+        "log1p_A_hz",
+        "log_period_days",
+        "phi_rad"
+      ],
+      "detection_threshold_training_space": 3.9318256327243257
+    },
+    "simulator": {
+      "covariate_columns": [
+        "seconds_since_first_observation",
+        "target",
+        "freq_unc_hz",
+        "temp_k"
+      ],
+      "null_model_distribution": "x2_gaussian_mixture",
+      "null_model_name": "crystal_gaussian_x2_mixture",
+      "null_model_parameters": {
+        "crystal_jitter_hz": {
+          "C10": 1328.268921695911,
+          "C13": 332.9463313982849,
+          "X2": 2692.1331896505767
+        },
+        "x2_mixture_train_nll": 184.74420047937957,
+        "x2_outlier_probability": 0.02,
+        "x2_outlier_scale_multiplier": 2.0
+      },
+      "periods_days_for_evaluation": [
+        7.0,
+        10.0,
+        14.0,
+        21.0,
+        30.0,
+        45.0,
+        60.0,
+        90.0,
+        120.0,
+        180.0,
+        240.0,
+        365.0
+      ],
+      "primary_rows": 55,
+      "prior": {
+        "a_max_hz": 6500.0,
+        "a_min_hz": 50.0,
+        "log_period_max": 5.8998973535824915,
+        "log_period_min": 1.9459101490553132,
+        "max_period_days": 365.0,
+        "min_period_days": 7.0,
+        "pi_null": 0.5,
+        "seed": 22902651
+      },
+      "simulator": "th229_sbi_npe_v1",
+      "simulator_config_hash": "6e6e79f5eed284b2",
+      "temperature_correction": "assumed already applied in primary_peak_b residual_hz",
+      "theta": [
+        "A_hz",
+        "log_period_days",
+        "phi_rad"
+      ]
+    }
+  },
+  "num_posterior_samples": 64,
+  "posterior_sampling": "direct with reject_outside_prior=False to avoid low-acceptance stalls; score uses amplitude marginal only",
+  "n_bootstrap": 20,
+  "predictions_path": "results/tables/sbi_npe_smoke_predictions.csv",
+  "comparison_path": "results/tables/sbi_npe_smoke_baseline_comparison.csv",
+  "a95_path": "results/tables/sbi_npe_smoke_a95_vs_frequency_with_uncertainty.csv",
+  "representative_table_path": "results/tables/sbi_npe_smoke_representative_frequency_table.csv",
+  "comparison_with_ml_path": "results/tables/baseline_comparison_with_ml.csv",
+  "representative_with_ml_path": "results/tables/final_representative_frequency_baseline_table_with_ml.csv",
+  "comparison_with_ml_rows": 0,
+  "representative_with_ml_rows": 0
+}
